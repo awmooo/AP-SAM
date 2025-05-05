@@ -2,9 +2,9 @@
 auto pore segment anything
 
 # TODO 
-- [] Usage
-- [] Ap-sam weight file
-- [] Improve code readability
+- [ ] Usage
+- [ ] Ap-sam weight file
+- [ ] Improve code readability
 
 # Usage
 coming soon
