@@ -1,6 +1,10 @@
 # AP-SAM
 auto pore segment anything
 
+# Training process
+Training process on mudstone data
+
+
 # TODO 
 - [ ] Usage
 - [ ] Ap-sam weight file
