@@ -2,9 +2,11 @@
 auto pore segment anything
 
 # Training process
-Training process on mudstone data
-
-
+Training process on mudstone data,we train AP-SAM in 200 epochs.
+Train loss on train set:
+![image](epoch200train_loss.svg)
+IoU and Dice Coefficient on vaild set:
+![image](epoch200val_iou_biou.svg)
 # TODO 
 - [ ] Usage
 - [ ] Ap-sam weight file
