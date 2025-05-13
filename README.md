@@ -48,7 +48,7 @@ Use requirements.txt install other :
 # Fine-tuned weight
 We provide the AP-SAM weights file after fine-tuning on the mudstone dataset. The model inputs are at 880x1024 resolution.
 
-Download the fine-tuned AP-SAM in ViT-B version here.[Google Drive](https://drive.google.com/file/d/1Eof4-e2q531D7f5VrRCBQiQAR2_VNf94/view?usp=sharing)
+Download the fine-tuned AP-SAM in ViT-B version here.[Google Drive](https://drive.google.com/file/d/1qAdj6o_2KQveai4_fK6LrInSiNkt7Ds8/view?usp=sharing)
 
 
 
