@@ -63,7 +63,7 @@ Then modify `process_labels.py` to convert labels of the mudstone data to binari
 Use `eval_APSAM.py` and `sh eval_ap_sam.sh` to test.
 
 ### Example
-Download the the weight of AP-SAM fine-tined on mudstone dataset. [model checkpoint](#model-checkpoints)
+Download the the weight of AP-SAM fine-tined on mudstone dataset. [model checkpoint](#Fine-tuned-weight)
 Put it in AP-SAM directory.
 
 `AP-SAM/best_model.pth`
