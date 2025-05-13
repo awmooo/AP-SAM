@@ -1,9 +1,9 @@
 # AP-SAM
-Auto pore segment anything Model.
+We propose a model that integrates a Convolutional Neural Network (CNN) with the Segment Anything Model (SAM) for automatic pore segmentation in rock SEM images. As shown in the figure below, this model is termed Auto-Pore SAM (**AP-SAM**).
 AP-SAM is capable of automatically segmenting pores in scanning electron microscope images of rocks for automatic pore analysis. 
 It prepares for 3D pore structure reconstruction, calculation of porosity and so on.
-
-
+ ![AP-SAM](AP-SAM.svg)
+AP-SAM architecture
 # Training process
 Training process on mudstone data,we train 200 epochs on AP-SAM.
 
