@@ -16,14 +16,34 @@ IoU and Dice Coefficient on vaild set(also test set):
 ![image](epoch200val_iou_biou.svg)
 # TODO 
 - [ ] Usage
-- [ ] Ap-sam weight file
+- [x] Ap-sam weight file
 - [ ] Improve code readability
 
 # Usage
 ## Installation
 The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
 
-After above installation, please install `opencv-python` `pycocotools` `matplotlib` `pillow` `numpy`
+After above installation, please install `opencv-python` `pycocotools` `matplotlib` `pillow` `numpy`(you can use requirements.txt install)
+
+**Example:**
+In Linux,
+Create and activate conda env:
+
+`conda create -n APSAM python==3.10`
+Activate it
+
+`conda activate APSAM`
+Install pytorch and torchvision (cuda version for GPU)
+
+`pip3 install torch torchvision torchaudio`
+Use requirements.txt install other :
+`cd AP-SAM`
+`pip install -r requirements.txt`
+
+
+
+
+
 
 # Fine-tuned weight
 We provide the AP-SAM weights file after fine-tuning on the mudstone dataset. The model inputs are at 880x1024 resolution.
