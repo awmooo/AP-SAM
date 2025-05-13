@@ -4,8 +4,9 @@ AP-SAM is capable of automatically segmenting pores in scanning electron microsc
 It prepares for 3D pore structure reconstruction, calculation of porosity and so on.
  ![AP-SAM](AP-SAM.svg)
 AP-SAM architecture
-# Training process
-Training process on mudstone data,we train 200 epochs on AP-SAM.
+# Training records
+
+Training records on mudstone data,we train 200 epochs on AP-SAM.
 
 Original Mudstone dataset is available on [Digital Rocks Portal](https://www.doi.org/10.17612/BVXS-BC79)
 
@@ -15,7 +16,8 @@ Train loss on train set:
 IoU and Dice Coefficient on vaild set(also test set):
 ![image](epoch200val_iou_biou.svg)
 # TODO 
-- [ ] Usage
+- [x] Usage-install&inference
+- [ ] Usage-Train
 - [x] Ap-sam weight file
 - [ ] Improve code readability
 
@@ -23,29 +25,67 @@ IoU and Dice Coefficient on vaild set(also test set):
 ## Installation
 The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
 
-After above installation, please install `opencv-python` `pycocotools` `matplotlib` `pillow` `numpy`(you can use requirements.txt install)
+After above installation, please install `opencv-python` `pycocotools` `matplotlib` `pillow` `numpy`(you can use requirements.txt to install)
 
-**Example:**
-In Linux,
-Create and activate conda env:
+### Example
+
+In Linux
+
+**1.Create and activate conda env:**
 
 `conda create -n APSAM python==3.10`
-Activate it
+
+**2.Activate it**
 
 `conda activate APSAM`
-Install pytorch and torchvision (cuda version for GPU)
+
+**3.Install pytorch and torchvision (cuda version for GPU)**
 
 `pip3 install torch torchvision torchaudio`
-Use requirements.txt install other :
+
+**4.Use requirements.txt install other :**
+
 `cd AP-SAM`
+
 `pip install -r requirements.txt`
 
 
+**5.Download mudstone dataset**
+
+Then modify `process_labels.py` to convert labels of the mudstone data to binarized maps containing only the pore and background.
+
+**6.Split the dataset to `train` and `val`(test).**
+
+(We will publish our dataset division later on)
+
+## Inference(test)
+
+Use `eval_APSAM.py` and `sh eval_ap_sam.sh` to test.
+
+### Example
+Download the the weight of AP-SAM fine-tined on mudstone dataset. [model checkpoint](#model-checkpoints)
+Put it in AP-SAM directory.
+
+`AP-SAM/best_model.pth`
+
+modify `eval_APSAM.py` to fit your dataset address.
+
+then run `eval_ap_sam.sh`
+
+`sh eval_ap_sam.sh`
+
+the eval_result will show in command window.
+
+## Train
+
+coming soon
 
 
 
 
-# Fine-tuned weight
+
+# Fine tuned weight
+
 We provide the AP-SAM weights file after fine-tuning on the mudstone dataset. The model inputs are at 880x1024 resolution.
 
 Download the fine-tuned AP-SAM in ViT-B version here.[Google Drive](https://drive.google.com/file/d/1qAdj6o_2KQveai4_fK6LrInSiNkt7Ds8/view?usp=sharing)
