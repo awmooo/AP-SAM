@@ -20,7 +20,16 @@ IoU and Dice Coefficient on vaild set(also test set):
 - [ ] Improve code readability
 
 # Usage
-coming soon
+## Installation
+The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
+
+After above installation, please install `opencv-python` `pycocotools` `matplotlib` `pillow` `numpy`
+
+# Fine-tuned weight
+We provide the AP-SAM weights file after fine-tuning on the mudstone dataset. The model inputs are at 880x1024 resolution.
+Download the fine-tuned AP-SAM in ViT-B version here.[Google Drive](https://drive.google.com/file/d/1Eof4-e2q531D7f5VrRCBQiQAR2_VNf94/view?usp=sharing)
+
+
 
 # Thanks 
 We modified [HQ-SAM](https://github.com/SysCV/sam-hq) to AP-SAM
